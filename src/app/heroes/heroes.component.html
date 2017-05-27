@@ -1,0 +1,10 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <hero *ngFor="let hero of heroes" [hero]="hero" [selectHero]="onSelectHero.bind(this)"></hero>
+</ul>
+<ul *ngIf="selectedHeroes.length > 0">
+    Selected heroes:
+   <li *ngFor="let selectedHero of selectedHeroes">
+       {{selectedHero.name}}
+   </li>
+</ul>
