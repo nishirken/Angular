@@ -5,6 +5,7 @@
 <ul *ngIf="selectedHeroes.length > 0">
     Selected heroes:
    <li *ngFor="let selectedHero of selectedHeroes">
-       {{selectedHero.name}}
+       <label>Change {{selectedHero.name}} name:</label>
+       <input type="text" [(ngModel)]="selectedHero.name">
    </li>
 </ul>
