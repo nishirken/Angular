@@ -18,6 +18,11 @@ export class HeroDetailComponent implements OnInit {
     title: string = 'Hero Details';
     hero: Hero;
 
+    save(): void {
+        this.heroesService.update(this.hero)
+            .then(() => this.goBack());
+    }
+
     goBack(): void {
         this.location.back();
     }

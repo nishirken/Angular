@@ -9,6 +9,7 @@ import { Hero } from './hero';
 export class HeroComponent {
     @Input() hero: Hero;
     @Input() selectHero;
+    @Input() delete;
     selected: boolean;
 
     onSelect(hero: Hero): void {
